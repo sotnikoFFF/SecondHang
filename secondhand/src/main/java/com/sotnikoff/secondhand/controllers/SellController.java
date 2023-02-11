@@ -1,5 +1,4 @@
 package com.sotnikoff.secondhand.controllers;
-import com.sotnikoff.secondhand.Listing;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

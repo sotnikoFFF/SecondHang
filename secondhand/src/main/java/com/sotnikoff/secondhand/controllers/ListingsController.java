@@ -1,5 +1,7 @@
-package com.sotnikoff.secondhand;
+package com.sotnikoff.secondhand.controllers;
 
+import com.sotnikoff.secondhand.data.sevices.ListingService;
+import com.sotnikoff.secondhand.data.Listing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

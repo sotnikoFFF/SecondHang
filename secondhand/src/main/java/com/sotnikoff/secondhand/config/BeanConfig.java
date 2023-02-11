@@ -1,6 +1,6 @@
 //package com.sotnikoff.secondhand.config;
 //
-//import com.sotnikoff.secondhand.JdbcListingRepository;
+//import com.sotnikoff.secondhand.repository.JdbcListingRepository;
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
 //import org.springframework.jdbc.core.JdbcTemplate;

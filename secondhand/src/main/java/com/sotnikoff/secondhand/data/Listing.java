@@ -1,11 +1,10 @@
-package com.sotnikoff.secondhand;
+package com.sotnikoff.secondhand.data;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 import java.math.BigDecimal;
 import java.sql.Date;
-import java.time.LocalDateTime;
 import java.util.Objects;
 @Entity
 public class Listing {

@@ -1,5 +1,6 @@
-package com.sotnikoff.secondhand;
+package com.sotnikoff.secondhand.repository;
 
+import com.sotnikoff.secondhand.data.Listing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
