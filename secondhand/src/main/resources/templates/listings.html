@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Second-Hand Site - Listings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    header nav a.active {
+      font-weight: bold;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      height: calc(100vh - 80px);
+    }
+    main h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .listing-card {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      height: 400px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .listing-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .listing-card h3 {
+      font-size: 24px;
+      margin: 20px;
+    }
+    .listing-card p {
+      font-size: 16px;
+      margin: 20px;
+      text-align: justify;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Second-Hand Site</h1>
+  <nav>
+    <a th:href="@{/}" th:class="${homeActive}" class="active">Home</a>
+    <a th:href="@{/listings}" th:class="${listingsActive}" class="active">Listings</a>
+    <a th:href="@{/sell}" th:class="${sellActive}" class="active">Sell</a>
+  </nav>
+</header>
+<main>
+  <h2>Listings</h2>
+  </p>
+
+  </div>
+  <div th:if="${listings != null && !listings.isEmpty()}" class="listings-container">
+    <div th:each="listing : ${listings}" class="listing-card">
+      <img th:src="${listing.imageUrl}" alt="Listing Image">
+      <h3 th:text="${listing.title}"></h3>
+      <p th:text="${listing.description}"></p>
+      <p th:text="'Price: $' + ${listing.price}"></p>
+    </div>
+  </div>
+</main>
+<footer>
+  <p>&copy; Second-Hand Site 2023</p>
+</footer>
+</body>
+</html>

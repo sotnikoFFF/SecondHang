@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Second-Hand Site - Sell</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    header nav a.active {
+      font-weight: bold;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      height: calc(100vh - 80px);
+    }
+    main h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    form {
+      width: 500px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    form label {
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    form input[type="text"], form textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+    form input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Second-Hand Site</h1>
+  <nav>
+    <a th:href="@{/}" th:class="${homeActive}" class="active">Home</a>
+    <a th:href="@{/listings}" th:class="${listingsActive}" class="active">Listings</a>
+    <a th:href="@{/sell}" th:class="${sellActive}" class="active">Sell</a>
+  </nav>
+</header>
+<main>
+  <h2>Sell an Item</h2>
+  <form action="#" method="post">
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" required>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="5" required></textarea>
+
+    <label for="price">Price:</label>
+    <input type="text" id="price" name="price" required>
+
+    <label for="category">Category:</label>
+    <select id="category" name="category" required>
+      <option value="">Select a category</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Fashion">Fashion</option>
+      <option value="Home & Garden">Home & Garden</option>
+      <option value="Sports & Outdoors">Sports & Outdoors</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</main>
+<footer>
+  <p>Copyright &copy; 2022 Second-Hand Site</p>
+</footer>
+</body>
+</html>

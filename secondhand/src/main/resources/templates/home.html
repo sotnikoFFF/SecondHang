@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Second-Hand Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    header nav a.active {
+      font-weight: bold;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      height: calc(100vh - 80px);
+    }
+    main h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Second-Hand Site</h1>
+  <nav>
+    <a th:href="@{/}" th:class="${homeActive}" class="active">Home</a>
+    <a th:href="@{/listings}" th:class="${listingsActive}" class="active">Listings</a>
+    <a th:href="@{/sell}" th:class="${sellActive}" class="active">Sell</a>
+  </nav>
+</header>
+<main>
+  <h2>Welcome to Second-Hand Site</h2>
+  <p>Buy and sell used items in your local community</p>
+  <a th:href="@{/listings}" class="btn">Explore Listings</a>
+</main>
+<footer>
+  <p>Copyright &copy; Second-Hand Site 2023</p>
+</footer>
+</body>
+</html>
